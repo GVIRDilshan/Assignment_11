@@ -162,6 +162,10 @@ table tbody, table thead {
     margin-right: 15px;
 }
 
+.dashIMG {
+    background-image: url("../aa.jpg");
+}
+
 .order-pane {
     background-color: #B2FFBA;
     border: 1px solid grey;
