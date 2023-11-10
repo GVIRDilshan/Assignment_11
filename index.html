@@ -159,7 +159,7 @@
     </section>
 
     <!--  Place Order Section  -->
-    <section id="order-section" class="container">
+    <!--<section id="order-section" class="container">
         <div class="row mb-3">
             <div class="mt-3 col-lg-3 col-md-3 col-12">
                 <label for="orderId" class="form-label">Order ID</label>
@@ -284,6 +284,118 @@
                     <tbody id="orderedItemTBody">
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>-->
+    <section id="order-section" class="container">
+        <div class="row mb-4">
+            <div class="col">
+                <h3 class="header">Place Order</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="order_container mt-3">
+                    <div class="container">
+                        <h4>Invoice Details</h4>
+                        <div class="row">
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div>
+                                    <label for="order_Id" class="form-label">Order ID</label>
+                                    <input type="number" class="form-control" id="order_Id">
+                                </div>
+                            </div>
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div>
+                                    <label for="custId" class="form-label">Customer Id</label>
+                                    <select class="form-select" aria-label="Default select example" id="custId">
+                                        <option selected>select the customer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div>
+                                    <label for="orderDate" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="orderDate">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order_container mt-3">
+                    <div class="container">
+                        <h4>Item Select</h4>
+                        <div class="row">
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div>
+                                    <label for="item_Id" class="form-label">Item Id</label>
+                                    <select class="form-select" aria-label="Default select example" id="item_Id">
+                                        <option selected>select the item</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="qtyOnHand" class="form-label">Qty On Hand</label>
+                                    <input type="number" class="form-control" id="qtyOnHand">
+                                </div>
+                            </div>
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div>
+                                    <label for="desc" class="form-label">Item Description</label>
+                                    <input type="text" class="form-control" id="desc">
+                                </div>
+                                <div>
+                                    <label for="quantity" class="form-label">Qty</label>
+                                    <input type="number" class="form-control" id="quantity">
+                                </div>
+                            </div>
+                            <div class="row justify-content-end mt-3">
+                                <button type="reset" class="btn btn-warning mb-3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-5 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="order_container mt-3">
+                    <div class="container">
+                        <h4>Cart</h4>
+                        <div class="row">
+                            <div class="col">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Salary</th>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>001</td>
+                                        <td>Ishan</td>
+                                        <td>Panadura</td>
+                                        <td>100000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>002</td>
+                                        <td>Dilshan</td>
+                                        <td>Kaluthra</td>
+                                        <td>23000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>003</td>
+                                        <td>Danidu</td>
+                                        <td>colombo</td>
+                                        <td>30000</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
