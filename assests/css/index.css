@@ -85,6 +85,31 @@ a img {
 a {
     cursor: pointer;
 }
+.navlist{
+    display: flex;
+}
+.navlist li{
+    position: relative;
+}
+.navlist a{
+    font-size: 20px;
+    color: black;
+    font-weight: 510;
+    padding: 10px 27px;
+}
+.navlist a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+}
+.navlist a:hover::after{
+    width: 100%;
+}
 
 .dashboard, .customer, .item, .order, .order-history {
     font-weight: 600;
