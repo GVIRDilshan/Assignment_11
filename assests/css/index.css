@@ -1,9 +1,12 @@
 * {
     position: relative;
 }
-
+body {
+    background: url("/assests/img/How-Cloud-based-POS-System-Simplifies-Restaurant-IT-Operations.png");
+  }
 #nav_bar {
     padding: 0;
+
 }
 
 nav h1 {
