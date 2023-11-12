@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="debbabfb-08b4-4479-a053-2dd76cefb031" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/assests/img/81282710_ml-900x450.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assests/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assests/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/orderHistoryController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/customerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/customerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/itemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/itemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/orderController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,29 +19,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="2XLv2MysFFuymX73wgizicOQG3D" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "G:/2nd sem/Assignments/Assignment_07",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\2nd sem\New folder\Assignment_11\assests\img" />
@@ -59,6 +56,7 @@
       <workItem from="1698420969417" duration="1395000" />
       <workItem from="1698766126665" duration="303000" />
       <workItem from="1699632295125" duration="2039000" />
+      <workItem from="1699769540319" duration="4255000" />
     </task>
     <task id="LOCAL-00001" summary="first commite">
       <option name="closed" value="true" />

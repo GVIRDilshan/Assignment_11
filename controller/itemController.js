@@ -20,6 +20,29 @@ const loadItemTable = () => {
 
 $(".item").on('click', ()=> loadItemTable());
 
+// search bar action
+$("#item_search_btn").on('click', function () {
+    let temp_item_index = items.findIndex(item => item.id == $("#item_search_bar").val());
+    let temp_item = items[temp_item_index];
+
+    if (temp_item != null ) {
+        $("#itemId").val(temp_item.id);
+        $("#itemName").val(temp_item.name);
+        $("#itemPrice").val(temp_item.price);
+        $("#itemQty").val(temp_item.qty);
+
+        row_index = temp_item_index;
+
+    } else {
+        Swal.fire({
+            icon: 'question',
+            title: "Can't find item !",
+            text: "Search another item CODE"
+        });
+    }
+
+});
+
 //save
 $("#item-save").on('click', () => {
     let id = $("#itemId").val(),

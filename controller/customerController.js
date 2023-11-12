@@ -21,6 +21,29 @@ const loadCustomerTable = () => {
 
 $(".customer").on('click', ()=> loadCustomerTable());
 
+// search bar action
+$("#customer_search_btn").on('click', function () {
+    let temp_customer_index = customers.findIndex(customer => customer.id == $("#customer_search_bar").val());
+    let temp_customer = customers[temp_customer_index];
+
+    if (temp_customer != null ) {
+       $("#cusId").val(temp_customer.id);
+       $("#cusName").val(temp_customer.name);
+       $("#cusAddress").val(temp_customer.address);
+       $("#cusSalary").val(temp_customer.salary);
+
+       row_index = temp_customer_index;
+
+    } else {
+        Swal.fire({
+            icon: 'question',
+            title: "Can't find customer !",
+            text: "Search another customer ID"
+        });
+    }
+
+});
+
 //save
 $("#cus-save").on('click', () => {
     let id = $("#cusId").val(),
@@ -41,7 +64,7 @@ $("#cus-save").on('click', () => {
         title: 'Customer has been saved',
         showConfirmButton: false,
         timer: 1500
-    })
+    });
 });
 
 //search

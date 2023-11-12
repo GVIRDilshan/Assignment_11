@@ -3,34 +3,56 @@ import {customers} from "../db/db_arrays.js";
 import {items} from "../db/db_arrays.js";
 import {orders} from "../db/db_arrays.js";
 import {Item} from "../model/item.js";
+import {Customer} from "../model/customer.js";
 
 let cusRowIndex = null;
 let itemRowIndex = null;
 let total = 0;
 let subTotal = 0;
+let item = null;
 let tempItems = [];
 let addedItems = [];
 
+customers.push(new Customer("C001" , "Ishan" , "Agal Oya" , 1000000));
+customers.push(new Customer("C002" , "Ishan" , "Agal Oya" , 1000000));
+customers.push(new Customer("C003" , "Ishan" , "Agal Oya" , 1000000));
+
+items.push(new Item("I001" , "abc" , 100 , 10));
+items.push(new Item("I002" , "abc" , 150 , 20));
+items.push(new Item("I003" , "abc" , 200 , 30));
+
 const loadAddItemTable = ()=>{
-    $("#orderedItemTBody").html("");
+    $("#order_item_table > tbody").html("");
     addedItems.map((item) => {
-        $("#orderedItemTBody").append(`
+        $("#order_item_table > tbody").append(`
                     <tr>
                         <td> ${item.id} </td>
                         <td> ${item.name} </td>
                         <td> ${item.price} </td>
                         <td> ${item.qty} </td>
-                        <td> ${item.price * item.qty} </td>
                     </tr>
     `   );
     })
+}
+
+// set current date
+function currentDate() {
+    let currentDate = new Date();
+    var dd = String(currentDate.getDate()).padStart(2, '0');
+    var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = currentDate.getFullYear();
+
+    currentDate = yyyy + '-' + mm + '-' + dd;
+
+    $("").val(currentDate);
+
 }
 
 const loadIdDate = () =>{
     if(customers.length == 0){
         $("#orderId").val("OD001");
     }else{
-        $("#orderId").val(generateNewId(orders[orders.length - 1].id));
+        // $("#orderId").val(generateNewId(orders[orders.length - 1].id));
     }
 
     $("#date").val(new Date().toLocaleDateString('en-GB'));
@@ -79,12 +101,25 @@ $("#itemSelector").on('click','select', function (){
     $("#qty-on-hand").val( items[itemRowIndex].qty );
 });
 
+//load Item details
+$("#orderItemId").on( 'change' , function () {
+    itemRowIndex = items.findIndex(item => item.id === $(this).val());
+    console.log(itemRowIndex);
+    if(itemRowIndex == null) return;
+    $("#orderItemName").val( items[itemRowIndex].name );
+    // $("#orderItemPrice").val( items[itemRowIndex].price );
+    $("#qtyOnHand").val( items[itemRowIndex].qty );
+
+    item = items[itemRowIndex];
+
+});
+
 //add-item action
 $("#add-item-btn").on('click', ()=>{
-    let id = $("#orderItemId").val(),
-        name = $("#orderItemName").val(),
-        price = Number.parseFloat($("#orderItemPrice").val()),
-        qty = Number.parseInt($("#orderItemQty").val()),
+    let id = item.id,
+        name = item.name,
+        price = Number.parseFloat(item.price),
+        qty = Number.parseInt($("#quantity").val()),
         itemTotal = price * qty;
 
     if(qty > items[itemRowIndex].qty || !qty) {
@@ -104,10 +139,12 @@ $("#add-item-btn").on('click', ()=>{
 
     tempItems.push(items[itemRowIndex]);
     items[itemRowIndex].qty -= qty;
-    $("#qty-on-hand").val( items[itemRowIndex].qty );
+    $("#qtyOnHand").val( items[itemRowIndex].qty );
 
     subTotal += itemTotal;
     $("#subTotal").text(`Sub Total: Rs. ${subTotal}`);
+
+    loadAddItemTable()
 });
 
 //show balance
