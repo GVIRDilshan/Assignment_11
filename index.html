@@ -50,9 +50,9 @@
         <div class="row justify-content-md-center mb-4">
             <div class="col col-lg-10 col-12">
                 <form class="d-flex" role="search">
-                    <input class="search form-control me-2" type="search" placeholder="Search Customer" aria-label="Search">
+                    <input id="customer_search_bar" class="search form-control me-2" type="search" placeholder="Search Customer" aria-label="Search">
                     <!-- <button id="search-btn" class="btn btn-outline-success" type="submit">Search</button> -->
-                    <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                    <i id="customer_search_btn" class="fa-solid fa-magnifying-glass search-btn"></i>
                 </form>
             </div>
         </div>
@@ -106,9 +106,9 @@
         <div class="row justify-content-md-center mb-4">
             <div class="col col-lg-10 col-12">
                 <form class="d-flex" role="search">
-                    <input class="search form-control me-2" type="search" placeholder="Search Item" aria-label="Search">
+                    <input id="item_search_bar" class="search form-control me-2" type="search" placeholder="Search Item" aria-label="Search">
                     <!-- <button id="search-btn" class="btn btn-outline-success" type="submit">Search</button> -->
-                    <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                    <i id="item_search_btn" class="fa-solid fa-magnifying-glass search-btn"></i>
                 </form>
             </div>
         </div>
@@ -178,8 +178,8 @@
                             </div>
                             <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div>
-                                    <label for="custId" class="form-label">Customer Id</label>
-                                    <select class="form-select" aria-label="Default select example" id="custId">
+                                    <label for="orderCusId" class="form-label">Customer Id</label>
+                                    <select class="form-select" aria-label="Default select example" id="orderCusId">
                                         <option selected>select the customer</option>
                                     </select>
                                 </div>
@@ -200,8 +200,8 @@
                         <div class="row">
                             <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div>
-                                    <label for="item_Id" class="form-label">Item Id</label>
-                                    <select class="form-select" aria-label="Default select example" id="item_Id">
+                                    <label for="orderItemId" class="form-label">Item Id</label>
+                                    <select class="form-select" aria-label="Default select example" id="orderItemId">
                                         <option selected>select the item</option>
                                     </select>
                                 </div>
@@ -212,8 +212,8 @@
                             </div>
                             <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div>
-                                    <label for="desc" class="form-label">Item Description</label>
-                                    <input type="text" class="form-control" id="desc">
+                                    <label for="orderItemName" class="form-label">Item Name</label>
+                                    <input type="text" class="form-control" id="orderItemName">
                                 </div>
                                 <div>
                                     <label for="quantity" class="form-label">Qty</label>
@@ -221,7 +221,7 @@
                                 </div>
                             </div>
                             <div class="row justify-content-end mt-3">
-                                <button type="reset" class="btn btn-warning mb-3">Add to Cart</button>
+                                <button id="add-item-btn" type="reset" class="btn btn-warning mb-3">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -234,33 +234,16 @@
                         <h4>Cart</h4>
                         <div class="row">
                             <div class="col">
-                                <table class="table table-bordered">
+                                <table id="order_item_table" class="table table-bordered">
                                     <thead>
-                                    <th>Id</th>
-                                    <th>Name</th>
-                                    <th>Address</th>
-                                    <th>Salary</th>
+                                    <th>Item Id</th>
+                                    <th>Item Name</th>
+                                    <th>Item Qty</th>
+                                    <th>Item Price</th>
                                     </thead>
 
-                                    <tbody>
-                                    <tr>
-                                        <td>001</td>
-                                        <td>Ishan</td>
-                                        <td>Panadura</td>
-                                        <td>100000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>002</td>
-                                        <td>Dilshan</td>
-                                        <td>Kaluthra</td>
-                                        <td>23000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>003</td>
-                                        <td>Danidu</td>
-                                        <td>colombo</td>
-                                        <td>30000</td>
-                                    </tr>
+                                    <tbody id="orderedItemTBody">
+
                                     </tbody>
                                 </table>
                             </div>
